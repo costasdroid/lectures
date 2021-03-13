@@ -1,79 +1,24 @@
 <!DOCTYPE html>
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width">
-  <title>Testing MathJax v3 Equation Numbering</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script>
-  MathJax = {
-    tex: {
-      tags: 'all'
-    }
-  };
+    MathJax = {
+      tex: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
   </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  <Style>
-  h1 {
-    text-align: center;
-    background: #CCCCCC;
-    padding: .2em 1em;
-    border-top: 3px solid #666666;
-    border-bottom: 3px solid #999999;
-  }
-  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
-<div style="padding:0 2em">
-\part*{\centering{Διαγώνισμα Κατεύθυνση Γ Λυκείου}}
-
-\section*{Θέμα Α}
-  \noindent
-  \begin{enumerate}
-    \item \textbf{[Μονάδες 8]} Έστω μία συνάρτηση $f$ με πεδίο ορισμού $Α$. Πότε λέμε ότι η $f$ παρουσιάζει στο $x_0\in Α$ (ολικό) ελάχιστο το $f(x_0)$;
-    \item \textbf{[Μονάδες 8]} Πότε μία συνάρτηση $f:Α\to \mathbb{R}$ λέγεται 1-1;
-    \item \textbf{[Μονάδες 9]} Αν $f$, $g$ είναι δύο συναρτήσεις με πεδίο ορισμού τα σύνολα $Α$, $Β$ αντιστοίχως, τι ονομάζουμε σύνθεση της $f$ με την $g$ και ποιο είναι το πεδίο ορισμού της;
-  \end{enumerate}
-
-\section*{Θέμα Β}
-  \noindent
-  Δίνεται η συνάρτηση $f(x):\mathbb{R}\to \mathbb{R}$ για την οποία ισχύει
-  $$f(\ln x)=\frac{1}{x}-\ln x-1 \text{, για κάθε } x>0$$
-  \begin{enumerate}
-    \item \textbf{[Μονάδες 6]} Να δείξετε ότι $f(x)=e^{-x}-x-1$, $x\in \mathbb{R}$.
-    \item \textbf{[Μονάδες 6]} Να εξετάσετε τη συνάρτηση $f$ ως προς την μονοτονία.
-    \item \textbf{[Μονάδες 6]} Να λύσετε την ανίσωση $e^{-x}>x+1$.
-    \item \textbf{[Μονάδες 7]} Να λύσετε την εξίσωση $(x^2+1)e^{x^2}=1$.
-  \end{enumerate}
-  %\vspace{7\baselineskip}
-
-\section*{Θέμα Γ}
-  \noindent
-  Δίνεται η συνάρτηση $f(x)=\frac{e^x}{e^x-1}$.
-  \begin{enumerate}
-    \item \textbf{[Μονάδες 6]} Να βρείτε το πεδίο ορισμού της συνάρτησης $f$ και να εξετάσετε, αν η γραφική παράσταση της $f$ τέμνει τους άξονες $x'x$ και $y'y$.
-    \item \textbf{[Μονάδες 6]} Να δείξετε ότι η $f$ είναι συνάρτηση 1-1.
-    \item \textbf{[Μονάδες 6]} Να δείξετε ότι ορίζεται η αντίστροφη συνάρτηση $f^{-1}$ και να την βρείτε.
-    \item \textbf{[Μονάδες 7]} Να λύσετε την εξίσωση
-    $$f^{-1}\left(\frac{1}{1-e}+2-f(\ln x)\right)=-1$$
-  \end{enumerate}
-
-  \section*{Θέμα Δ}
-    \noindent
-    Δίνεται η συνάρτηση $f(x)=x+\ln(x^2+1)$, $x\ge 0$.
-    \begin{enumerate}
-      \item \textbf{[Μονάδες 6]} Να μελετήσετε ως προς τη μονοτονία τη συνάρτηση $f$ στο διάστημα $[0,+\infty)$ και στη συνέχεια να βρείτε την ελάχιστη τιμή της $f$.
-      \item \textbf{[Μονάδες 6]} Να λύσετε την ανίσωση
-      $$\ln (x^4+1)>\ln (2e)-x^2$$
-      \item \textbf{[Μονάδες 6]} Να λύσετε την παρακάτω εξίσωση στο διάστημα $[-\frac{4}{3},+\infty)$
-$$x^2-3x-4=\ln \frac{(3x+4)^2+1}{x^4+1}$$
-      \item \textbf{[Μονάδες 7]} Να δείξετε ότι η $f$ αντιστρέφεται και στη συνέχεια να βρείτε τα κοινά σημεία των $C_f$ και $C_{f^{-1}}$, αν θεωρήσουμε γνωστό ότι η $f$ έχει σύνολο τιμών το $[0,+\infty)$ και ότι τέμνονται μόνο στη $y=x$.
-    \end{enumerate}
-
-\vspace{2\baselineskip}
-
-\part*{\centering{Καλή επιτυχία}}
-</div>
 
 </body>
 </html>
